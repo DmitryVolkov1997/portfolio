@@ -1,0 +1,25 @@
+@import "src/assets/styles/vars"
+@import "src/assets/styles/mixins"
+
+.h1,
+.h2,
+.h3
+  margin: 0
+  color: $black
+
+.h1
+  @include font-sans-medium
+  font-size: $text-3xl
+  line-height: 36px
+
+.h2
+  @include font-sans-medium
+  font-size: $text-2xl
+  line-height: 30px
+
+.h3
+  @include font-sans-semibold
+  font-size: $text-xl
+  line-height: 27px
+
+

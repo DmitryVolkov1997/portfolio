@@ -1,0 +1,53 @@
+@import "src/assets/styles/vars"
+@import "src/assets/styles/mixins"
+
+.button
+  display: inline-block
+  cursor: pointer
+  padding: 11px 10px
+  text-align: center
+  border-radius: 5px
+  @include font-sans-regular
+  font-size: $text-sm
+
+  &.primary,
+  &.ghost
+    transition: background-color 0.3s ease
+
+  &.primary
+    background: $primary
+    border: 1px solid $white
+    color: $white
+
+    svg
+      fill: $white
+
+      &:hover
+        background: darken($primary, 7%)
+
+  &.ghost
+    background: $white
+    border: 1px solid $light-gray
+    color: $black
+
+    &:hover
+      background: darken($white, 7%)
+
+
+.arrow
+  margin-left: 11px
+
+.down
+  transform: rotate(90deg)
+  transition: all 0.3s ease
+
+
+
+
+
+
+
+
+
+
+

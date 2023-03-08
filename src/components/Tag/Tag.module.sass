@@ -1,0 +1,44 @@
+@import "src/assets/styles/vars"
+@import "src/assets/styles/mixins"
+
+.tag
+  display: inline-block
+  margin-right: 5px
+  border-radius: 20px
+  text-align: center
+
+.sm
+  padding: 5px 12px
+  font-size: 12px
+  line-height: 18px
+
+.md
+  padding: 5px 12px
+  font-size: 14px
+  line-height: 22px
+
+
+.ghost
+  @include font-sans-medium
+  border: 1px solid $light-gray
+  color: $black
+
+.red
+  @include font-sans-semibold
+  color: $white
+  background-color: $dark-red
+
+.green
+  @include font-sans-bold
+  color: $green
+  background-color: $light-green
+
+.gray
+  @include font-sans-semibold
+  color: $white
+  background-color: $dark-gray
+
+.primary
+  @include font-sans-medium
+  color: $primary
+  border: 1px solid $primary
