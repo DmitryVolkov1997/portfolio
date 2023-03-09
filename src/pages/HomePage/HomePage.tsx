@@ -1,7 +1,14 @@
 import styles from './HomePage.module.sass'
-import {Button, Htag, P, Tag} from 'components'
+import {Button, Htag, P, Rating, Tag} from 'components'
+import {useState} from 'react'
 
 export const HomePage = () => {
+	const [rating, setRating] = useState(4)
+
+	const handleRating = (rating: number) => {
+		setRating(rating)
+	}
+
 	return (
 		<div className={styles.test}>
 			<Htag tag={'h1'}>Курсы по Photoshop</Htag>
@@ -21,6 +28,7 @@ export const HomePage = () => {
 			<Tag color={'green'} size={'sm'}>Tag-1</Tag>
 			<Tag color={'red'} size={'md'}>Tag-1</Tag>
 			<Tag color={'gray'} size={'sm'}>Tag-1</Tag>
+			<Rating isEditable rating={rating} setRating={handleRating}/>
 		</div>
 	)
 }
