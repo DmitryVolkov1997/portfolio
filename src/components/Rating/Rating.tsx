@@ -37,13 +37,11 @@ export const Rating = ({rating = 4, isEditable = false, setRating, ...props}: Ra
 
 		setRatingArray(updatedArray)
 	}
-
 	const changeDisplay = (rating: number) => {
 		if (!isEditable) return
 
 		constructRating(rating)
 	}
-
 	const onClick = (rating: number) => {
 		if (!isEditable || !setRating) return
 
