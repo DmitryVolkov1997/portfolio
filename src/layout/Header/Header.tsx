@@ -1,11 +1,13 @@
+import cn from 'classnames'
+import { DetailedHTMLProps, HTMLAttributes } from 'react'
 import styles from './Header.module.sass'
-import {DetailedHTMLProps, HTMLAttributes} from 'react'
 
-interface HeaderProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
+interface HeaderProps
+	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
-export const Header = ({...props}: HeaderProps) => {
+export const Header = ({ className, ...props }: HeaderProps) => {
 	return (
-		<div className={styles.header} {...props}>
+		<div className={cn(styles.header, className)} {...props}>
 			Header Component
 		</div>
 	)

@@ -1,1 +1,39 @@
-.footer 
+@import "src/assets/styles/vars.sass"
+@import "src/assets/styles/mixins.sass"
+
+.footer
+	padding: 25px 32px
+	background-color: $primary
+	color: $white
+	@include font-sans-medium
+	font-size: 16px
+	line-height: 22px
+
+.row
+	display: grid
+	grid-template-columns: 1fr auto
+	align-content: center
+
+.list
+	@include reset-list
+	display: grid
+	grid-template-columns: 1fr 1fr
+	align-items: center
+	gap: 10px 30px
+
+	&Link
+		color: inherit
+		@include font-sans-medium
+
+		&:hover
+			text-decoration: underline
+
+@media ( max-width:	1024px)
+	.list
+		grid-template-columns: 1fr
+
+@media ( max-width:	767px)
+	.row
+		display: grid
+		grid-template-columns: 1fr
+		align-content: center

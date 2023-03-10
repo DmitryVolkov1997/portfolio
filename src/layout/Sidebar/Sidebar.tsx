@@ -1,11 +1,13 @@
+import cn from 'classnames'
+import { DetailedHTMLProps, HTMLAttributes } from 'react'
 import styles from './Sidebar.module.sass'
-import {DetailedHTMLProps, HTMLAttributes} from 'react'
 
-interface SidebarProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>{}
+interface SidebarProps
+	extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
 
-export const Sidebar = ({...props}: SidebarProps) => {
+export const Sidebar = ({ className, ...props }: SidebarProps) => {
 	return (
-		<div className={styles.sidebar} {...props}>
+		<div className={cn(styles.sidebar, className)} {...props}>
 			Sidebar Component
 		</div>
 	)
